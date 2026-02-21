@@ -5,7 +5,9 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 export default function AboutSection() {
     return (
-        <Box sx={{ py: { xs: 10, md: 16 }, background: "#fff" }}>
+        <Box
+            id="about"
+            sx={{ py: { xs: 10, md: 16 }, background: "#fff" }}>
             <Container maxWidth="lg">
 
                 <Box
@@ -42,7 +44,7 @@ export default function AboutSection() {
 
                             <Box
                                 component="img"
-                                src="/lady.png"
+                                src="/api.png"
                                 sx={{
                                     width: { xs: 160, md: 220 },
                                     borderRadius: "20px",
@@ -112,7 +114,7 @@ export default function AboutSection() {
                         <Typography
                             variant="h4"
                             sx={{
-                                fontWeight: 800,
+                                fontWeight: 0,
                                 mb: 3,
                                 lineHeight: 1.25
                             }}

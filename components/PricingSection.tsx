@@ -2,6 +2,7 @@
 
 import { Box, Typography, Container, Button } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const plans = [
   {
@@ -46,8 +47,21 @@ const plans = [
 ];
 
 export default function PricingSection() {
+
+  /* WhatsApp message generator */
+  const whatsappLink = (plan: any) => {
+    const message = `Hello, I'm interested in the ${plan.name} plan (${plan.price}).
+
+Features:
+${plan.features.join("\n")}
+
+Please provide more details.`;
+
+    return `https://wa.me/2349150242622?text=${encodeURIComponent(message)}`;
+  };
+
   return (
-    <Box sx={{ py: { xs: 10, md: 16 }, background: "#ffffff" }}>
+    <Box id="pricing" sx={{ py: { xs: 10, md: 16 }, background: "#ffffff" }}>
       <Container maxWidth="lg">
 
         {/* HEADER */}
@@ -90,40 +104,26 @@ export default function PricingSection() {
                   ? "linear-gradient(180deg,#4651E3,#7C8BFF)"
                   : "white",
                 color: plan.highlight ? "white" : "inherit",
-                border: plan.highlight
-                  ? "none"
-                  : "1px solid #eef2ff",
+                border: plan.highlight ? "none" : "1px solid #eef2ff",
                 transition: "0.35s",
-
                 "&:hover": {
                   transform: "translateY(-10px)",
                   boxShadow: "0 30px 70px rgba(0,0,0,0.12)"
                 }
               }}
             >
-              {/* PLAN NAME */}
+              {/* NAME */}
               <Typography sx={{ fontWeight: 700, mb: 1 }}>
                 {plan.name}
               </Typography>
 
               {/* PRICE */}
-              <Typography
-                sx={{
-                  fontSize: 40,
-                  fontWeight: 800,
-                  mb: 1
-                }}
-              >
+              <Typography sx={{ fontSize: 40, fontWeight: 800, mb: 1 }}>
                 {plan.price}
               </Typography>
 
               {/* DESC */}
-              <Typography
-                sx={{
-                  opacity: 0.85,
-                  mb: 4
-                }}
-              >
+              <Typography sx={{ opacity: 0.85, mb: 4 }}>
                 {plan.desc}
               </Typography>
 
@@ -139,6 +139,10 @@ export default function PricingSection() {
 
               {/* BUTTON */}
               <Button
+                component="a"
+                href={whatsappLink(plan)}
+                target="_blank"
+                startIcon={<WhatsAppIcon />}
                 fullWidth
                 sx={{
                   py: 1.6,
@@ -152,7 +156,7 @@ export default function PricingSection() {
                   }
                 }}
               >
-                Get Started
+                Choose Plan
               </Button>
             </Box>
           ))}

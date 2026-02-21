@@ -38,12 +38,14 @@ const projects = [
 
 export default function ProjectsSection() {
     return (
-        <Box sx={{ py: { xs: 10, md: 16 }, background: "#f9fbff" }}>
+        <Box
+        id="projects"
+        sx={{ py: { xs: 10, md: 16 }, background: "#f9fbff" }}>
             <Container maxWidth="lg">
 
                 {/* HEADER */}
                 <Box textAlign="center" mb={10}>
-                    <Typography variant="h4" sx={{ fontWeight: 800, mb: 2 }}>
+                    <Typography variant="h4" sx={{ fontWeight: 0, mb: 2 }}>
                         Solutions We’ve Built for Clients
                     </Typography>
 

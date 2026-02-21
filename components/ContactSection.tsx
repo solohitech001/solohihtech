@@ -8,7 +8,9 @@ import LanguageIcon from "@mui/icons-material/Language";
 
 export default function ContactSection() {
   return (
-    <Box sx={{ position: "relative", py: { xs: 10, md: 16 }, overflow: "hidden" }}>
+    <Box 
+    id="contact"
+    sx={{ position: "relative", py: { xs: 10, md: 16 }, overflow: "hidden" }}>
 
       {/* BACKGROUND SHAPES */}
       <Box

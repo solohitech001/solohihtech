@@ -47,8 +47,8 @@ export default function PortfolioSection() {
 
                 {/* HEADER */}
                 <Box textAlign="center" mb={10}>
-                    <Typography variant="h4" sx={{ fontWeight: 800, mb: 2 }}>
-                        Software Solutions I've Built
+                    <Typography variant="h4" sx={{ fontWeight: 0, mb: 2 }}>
+                        Software Solutions we’ve Built
                     </Typography>
 
                     <Typography
@@ -59,8 +59,8 @@ export default function PortfolioSection() {
                             lineHeight: 1.8
                         }}
                     >
-                        A collection of real-world systems, platforms, and applications I’ve
-                        designed and developed — built with scalability, performance, and
+                        A collection of real-world systems, platforms, and applications we’ve
+                        designed and developed  built with scalability, performance, and
                         production reliability in mind.
                     </Typography>
                 </Box>

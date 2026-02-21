@@ -50,7 +50,7 @@ export default function ServicesSection() {
         <Box textAlign="center" mb={10}>
           <Typography
             variant="h4"
-            sx={{ fontWeight: 800, mb: 2 }}
+            sx={{ fontWeight: 0, mb: 2 }}
           >
             We Offer The Best Quality Service for You
           </Typography>
